@@ -37,7 +37,7 @@ const startApp = async () => {
     const userInput = await inquirer.prompt([{
       name: 'number',
       type: 'input',
-      message: 'Please select a number from 1 to 49... ',
+      message: `Please select a number from 1 to ${LOTTERY_NUMBER_UPPER_BOUND}... `,
     }]);
     validateInput(userInput.number);
   } while (chosenNumbers.length < LOTTERY_NUMBER_AMOUNT);
